@@ -1,0 +1,80 @@
+﻿@model BHGroup.Areas.Admin.ViewModels.LetterModel
+@{
+    ViewBag.Title = "";
+}
+<section class="content-header">
+    <h1>
+        Welcome Letter
+        @*<br /><br />
+       @Html.DropDownList("Members", (IEnumerable<SelectListItem>)ViewBag.MemberLookUp, "", new { @class = "form-control chosen col-md-6" })*@
+        <br />
+        <br />
+        <a id="btnPrint" href="#" class="btn btn-primary btn-left pull-left" onclick="Print(event, 'btn1');"><i class="glyphicon glyphicon-print"></i>Print</a>
+        <br />
+        <br />
+    </h1>
+
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Letter</a></li>
+        <li class="active">Welcome Letter</li>
+    </ol>
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="clearfix"></div>
+
+            <div id="letter" style="margin-left: 30px; margin-right: 30px; width: 595px; height: 842px; margin-top: 100px; white-space: normal; font-size: 16px;">
+                <p>
+                    Date : <label id="date"></label>@Convert.ToDateTime(Model.StartDate).ToString("d")
+                </p>
+
+
+                <h3 style="text-align:center">WELCOME LETTER</h3> <br />
+
+                <p>
+                    Dear,<br /><label>@Model.Name</label><br />
+
+                    <label style=" white-space: normal; width: 295px;">@Model.Address</label>
+
+
+
+                </p>
+                <p> Dear Sir/Madam</p>
+                <p style="margin-left:25px">We welcome you to be a member of our <b>“Saumya Greenz”</b> family.</p>
+
+                <p style="margin-left:25px;">
+                    We are very much thankful for providing us an opportunity to start our new relations and to serve you as a family member.
+                </p>
+                <p style="margin-left:25px;">
+                    We pray to almighty for your good health, wealth and happy time with our family.
+                </p>
+                Date    : @Convert.ToDateTime(Model.StartDate).ToString("d")<br /><br /><br />
+
+
+                <div style="float: right; width: 143px;">
+                    Your’s faithfully,<br />
+                    For, Saumya Greenz<br /><br />
+
+
+                    Authorised Signatory
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+<script type="text/javascript">
+    @*$("#Members").on('change', function (evt, params) {
+        var path = '@Url.Action("Index", "Letters", new { id = "" })' + '?id=' + $(this).val();
+
+        window.location = path;
+      
+    });*@
+
+    function Print(event) {
+        event.preventDefault(); window.print();
+    }
+</script>

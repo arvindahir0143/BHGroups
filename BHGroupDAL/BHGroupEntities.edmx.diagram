@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="13828ac963e741d6a81ea9ebee7e6a72" Name="Diagram1" ZoomLevel="67">
+        <EntityTypeShape EntityType="BHGroupModel.AdminLogin" Width="1.5" PointX="5.75" PointY="3.75" />
+        <EntityTypeShape EntityType="BHGroupModel.DrowToken" Width="1.5" PointX="5.25" PointY="7.25" />
+        <EntityTypeShape EntityType="BHGroupModel.Member" Width="1.5" PointX="0.75" PointY="3.5" />
+        <EntityTypeShape EntityType="BHGroupModel.MemberPayroll" Width="1.5" PointX="3" PointY="3.125" />
+        <EntityTypeShape EntityType="BHGroupModel.PloatBooking" Width="1.5" PointX="3" PointY="10.625" />
+        <EntityTypeShape EntityType="BHGroupModel.UserProfile" Width="1.5" PointX="8" PointY="0.875" />
+        <EntityTypeShape EntityType="BHGroupModel.webpages_Membership" Width="1.5" PointX="7.75" PointY="3.75" />
+        <EntityTypeShape EntityType="BHGroupModel.webpages_OAuthMembership" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BHGroupModel.webpages_Roles" Width="1.5" PointX="5.75" PointY="0.875" />
+        <EntityTypeShape EntityType="BHGroupModel.vw_MemberDetail" Width="1.5" PointX="7.75" PointY="7.75" />
+        <EntityTypeShape EntityType="BHGroupModel.vw_PlotBooking" Width="1.5" PointX="9.75" PointY="3.75" />
+        <AssociationConnector Association="BHGroupModel.FK_DrowTokens_Member" />
+        <AssociationConnector Association="BHGroupModel.FK_DrowTokens_Member1" />
+        <AssociationConnector Association="BHGroupModel.FK_MemberPayroll_Member" />
+        <AssociationConnector Association="BHGroupModel.FK_PloatBooking_Member" />
+        <AssociationConnector Association="BHGroupModel.webpages_UsersInRoles" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

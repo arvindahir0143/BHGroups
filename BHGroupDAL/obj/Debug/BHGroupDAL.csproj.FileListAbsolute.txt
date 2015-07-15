@@ -1,0 +1,39 @@
+D:\Project\BHGroup\Site\BHGroup\BHGroupDAL\bin\Debug\BHGroupDAL.dll.config
+D:\Project\BHGroup\Site\BHGroup\BHGroupDAL\bin\Debug\BHGroupDAL.dll
+D:\Project\BHGroup\Site\BHGroup\BHGroupDAL\bin\Debug\BHGroupDAL.pdb
+D:\Project\BHGroup\Site\BHGroup\BHGroupDAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Project\BHGroup\Site\BHGroup\BHGroupDAL\bin\Debug\EntityFramework.xml
+D:\Project\BHGroup\Site\BHGroup\BHGroupDAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Project\BHGroup\Site\BHGroup\BHGroupDAL\obj\Debug\BHGroupDAL.dll
+D:\Project\BHGroup\Site\BHGroup\BHGroupDAL\obj\Debug\BHGroupDAL.pdb
+D:\Project\BHGroup\Site\BHGroup\BHGroupDAL\bin\Debug\EntityFramework.dll
+D:\Project\BHGroup\Site\BHGroup\BHGroupDAL\obj\Debug\BHGroupDAL.csprojResolveAssemblyReference.cache
+D:\Develo\BHGroup\Site\BHGroup\BHGroup\BHGroupDAL\bin\Debug\BHGroupDAL.dll.config
+D:\Develo\BHGroup\Site\BHGroup\BHGroup\BHGroupDAL\bin\Debug\BHGroupDAL.dll
+D:\Develo\BHGroup\Site\BHGroup\BHGroup\BHGroupDAL\bin\Debug\BHGroupDAL.pdb
+D:\Develo\BHGroup\Site\BHGroup\BHGroup\BHGroupDAL\bin\Debug\EntityFramework.dll
+D:\Develo\BHGroup\Site\BHGroup\BHGroup\BHGroupDAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Develo\BHGroup\Site\BHGroup\BHGroup\BHGroupDAL\bin\Debug\EntityFramework.xml
+D:\Develo\BHGroup\Site\BHGroup\BHGroup\BHGroupDAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Develo\BHGroup\Site\BHGroup\BHGroup\BHGroupDAL\obj\Debug\BHGroupDAL.dll
+D:\Develo\BHGroup\Site\BHGroup\BHGroup\BHGroupDAL\obj\Debug\BHGroupDAL.pdb
+D:\Develo\BHGroup\Site\BHGroup\BHGroupDAL\bin\Debug\BHGroupDAL.dll.config
+D:\Develo\BHGroup\Site\BHGroup\BHGroupDAL\bin\Debug\BHGroupDAL.dll
+D:\Develo\BHGroup\Site\BHGroup\BHGroupDAL\bin\Debug\BHGroupDAL.pdb
+D:\Develo\BHGroup\Site\BHGroup\BHGroupDAL\bin\Debug\EntityFramework.dll
+D:\Develo\BHGroup\Site\BHGroup\BHGroupDAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Develo\BHGroup\Site\BHGroup\BHGroupDAL\bin\Debug\EntityFramework.xml
+D:\Develo\BHGroup\Site\BHGroup\BHGroupDAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Develo\BHGroup\Site\BHGroup\BHGroupDAL\obj\Debug\BHGroupDAL.dll
+D:\Develo\BHGroup\Site\BHGroup\BHGroupDAL\obj\Debug\BHGroupDAL.pdb
+D:\Develo\BHGroup\Site\BHGroup\BHGroupDAL\obj\Debug\BHGroupDAL.csprojResolveAssemblyReference.cache
+E:\Payment-Mdel-Bh group\BHGroup\BHGroupDAL\bin\Debug\BHGroupDAL.dll.config
+E:\Payment-Mdel-Bh group\BHGroup\BHGroupDAL\bin\Debug\BHGroupDAL.dll
+E:\Payment-Mdel-Bh group\BHGroup\BHGroupDAL\bin\Debug\BHGroupDAL.pdb
+E:\Payment-Mdel-Bh group\BHGroup\BHGroupDAL\bin\Debug\EntityFramework.dll
+E:\Payment-Mdel-Bh group\BHGroup\BHGroupDAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\Payment-Mdel-Bh group\BHGroup\BHGroupDAL\bin\Debug\EntityFramework.xml
+E:\Payment-Mdel-Bh group\BHGroup\BHGroupDAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\Payment-Mdel-Bh group\BHGroup\BHGroupDAL\obj\Debug\BHGroupDAL.csprojResolveAssemblyReference.cache
+E:\Payment-Mdel-Bh group\BHGroup\BHGroupDAL\obj\Debug\BHGroupDAL.dll
+E:\Payment-Mdel-Bh group\BHGroup\BHGroupDAL\obj\Debug\BHGroupDAL.pdb

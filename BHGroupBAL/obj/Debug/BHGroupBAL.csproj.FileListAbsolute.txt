@@ -1,0 +1,60 @@
+D:\Project\BHGroup\Site\BHGroup\BHGroupBAL\bin\Debug\BHGroupBAL.dll
+D:\Project\BHGroup\Site\BHGroup\BHGroupBAL\bin\Debug\BHGroupBAL.pdb
+D:\Project\BHGroup\Site\BHGroup\BHGroupBAL\bin\Debug\BHGroupDAL.dll
+D:\Project\BHGroup\Site\BHGroup\BHGroupBAL\bin\Debug\BHGroupEntity.dll
+D:\Project\BHGroup\Site\BHGroup\BHGroupBAL\bin\Debug\Utilities.dll
+D:\Project\BHGroup\Site\BHGroup\BHGroupBAL\bin\Debug\BHGroupDAL.pdb
+D:\Project\BHGroup\Site\BHGroup\BHGroupBAL\bin\Debug\BHGroupEntity.pdb
+D:\Project\BHGroup\Site\BHGroup\BHGroupBAL\bin\Debug\Utilities.pdb
+D:\Project\BHGroup\Site\BHGroup\BHGroupBAL\obj\Debug\BHGroupBAL.dll
+D:\Project\BHGroup\Site\BHGroup\BHGroupBAL\obj\Debug\BHGroupBAL.pdb
+D:\Project\BHGroup\Site\BHGroup\BHGroupBAL\bin\Debug\EntityFramework.dll
+D:\Project\BHGroup\Site\BHGroup\BHGroupBAL\bin\Debug\Newtonsoft.Json.dll
+D:\Project\BHGroup\Site\BHGroup\BHGroupBAL\bin\Debug\EntityFramework.xml
+D:\Project\BHGroup\Site\BHGroup\BHGroupBAL\bin\Debug\Newtonsoft.Json.xml
+D:\Project\BHGroup\Site\BHGroup\BHGroupBAL\obj\Debug\BHGroupBAL.csprojResolveAssemblyReference.cache
+D:\Develo\BHGroup\Site\BHGroup\BHGroup\BHGroupBAL\obj\Debug\BHGroupBAL.csprojResolveAssemblyReference.cache
+D:\Develo\BHGroup\Site\BHGroup\BHGroup\BHGroupBAL\obj\Debug\BHGroupBAL.dll
+D:\Develo\BHGroup\Site\BHGroup\BHGroup\BHGroupBAL\obj\Debug\BHGroupBAL.pdb
+D:\Develo\BHGroup\Site\BHGroup\BHGroup\BHGroupBAL\bin\Debug\BHGroupBAL.dll
+D:\Develo\BHGroup\Site\BHGroup\BHGroup\BHGroupBAL\bin\Debug\BHGroupBAL.pdb
+D:\Develo\BHGroup\Site\BHGroup\BHGroup\BHGroupBAL\bin\Debug\BHGroupDAL.dll
+D:\Develo\BHGroup\Site\BHGroup\BHGroup\BHGroupBAL\bin\Debug\BHGroupEntity.dll
+D:\Develo\BHGroup\Site\BHGroup\BHGroup\BHGroupBAL\bin\Debug\EntityFramework.dll
+D:\Develo\BHGroup\Site\BHGroup\BHGroup\BHGroupBAL\bin\Debug\Newtonsoft.Json.dll
+D:\Develo\BHGroup\Site\BHGroup\BHGroup\BHGroupBAL\bin\Debug\Utilities.dll
+D:\Develo\BHGroup\Site\BHGroup\BHGroup\BHGroupBAL\bin\Debug\BHGroupDAL.pdb
+D:\Develo\BHGroup\Site\BHGroup\BHGroup\BHGroupBAL\bin\Debug\BHGroupEntity.pdb
+D:\Develo\BHGroup\Site\BHGroup\BHGroup\BHGroupBAL\bin\Debug\EntityFramework.xml
+D:\Develo\BHGroup\Site\BHGroup\BHGroup\BHGroupBAL\bin\Debug\Newtonsoft.Json.xml
+D:\Develo\BHGroup\Site\BHGroup\BHGroup\BHGroupBAL\bin\Debug\Utilities.pdb
+D:\Develo\BHGroup\Site\BHGroup\BHGroupBAL\bin\Debug\Utilities.dll
+D:\Develo\BHGroup\Site\BHGroup\BHGroupBAL\obj\Debug\BHGroupBAL.csprojResolveAssemblyReference.cache
+D:\Develo\BHGroup\Site\BHGroup\BHGroupBAL\bin\Debug\BHGroupBAL.dll
+D:\Develo\BHGroup\Site\BHGroup\BHGroupBAL\bin\Debug\BHGroupBAL.pdb
+D:\Develo\BHGroup\Site\BHGroup\BHGroupBAL\bin\Debug\BHGroupDAL.dll
+D:\Develo\BHGroup\Site\BHGroup\BHGroupBAL\bin\Debug\BHGroupEntity.dll
+D:\Develo\BHGroup\Site\BHGroup\BHGroupBAL\bin\Debug\EntityFramework.dll
+D:\Develo\BHGroup\Site\BHGroup\BHGroupBAL\bin\Debug\Newtonsoft.Json.dll
+D:\Develo\BHGroup\Site\BHGroup\BHGroupBAL\bin\Debug\BHGroupDAL.pdb
+D:\Develo\BHGroup\Site\BHGroup\BHGroupBAL\bin\Debug\BHGroupEntity.pdb
+D:\Develo\BHGroup\Site\BHGroup\BHGroupBAL\bin\Debug\EntityFramework.xml
+D:\Develo\BHGroup\Site\BHGroup\BHGroupBAL\bin\Debug\Newtonsoft.Json.xml
+D:\Develo\BHGroup\Site\BHGroup\BHGroupBAL\bin\Debug\Utilities.pdb
+D:\Develo\BHGroup\Site\BHGroup\BHGroupBAL\obj\Debug\BHGroupBAL.dll
+D:\Develo\BHGroup\Site\BHGroup\BHGroupBAL\obj\Debug\BHGroupBAL.pdb
+E:\Payment-Mdel-Bh group\BHGroup\BHGroupBAL\obj\Debug\BHGroupBAL.csprojResolveAssemblyReference.cache
+E:\Payment-Mdel-Bh group\BHGroup\BHGroupBAL\obj\Debug\BHGroupBAL.dll
+E:\Payment-Mdel-Bh group\BHGroup\BHGroupBAL\obj\Debug\BHGroupBAL.pdb
+E:\Payment-Mdel-Bh group\BHGroup\BHGroupBAL\bin\Debug\BHGroupBAL.dll
+E:\Payment-Mdel-Bh group\BHGroup\BHGroupBAL\bin\Debug\BHGroupBAL.pdb
+E:\Payment-Mdel-Bh group\BHGroup\BHGroupBAL\bin\Debug\BHGroupDAL.dll
+E:\Payment-Mdel-Bh group\BHGroup\BHGroupBAL\bin\Debug\BHGroupEntity.dll
+E:\Payment-Mdel-Bh group\BHGroup\BHGroupBAL\bin\Debug\EntityFramework.dll
+E:\Payment-Mdel-Bh group\BHGroup\BHGroupBAL\bin\Debug\Newtonsoft.Json.dll
+E:\Payment-Mdel-Bh group\BHGroup\BHGroupBAL\bin\Debug\Utilities.dll
+E:\Payment-Mdel-Bh group\BHGroup\BHGroupBAL\bin\Debug\BHGroupDAL.pdb
+E:\Payment-Mdel-Bh group\BHGroup\BHGroupBAL\bin\Debug\BHGroupEntity.pdb
+E:\Payment-Mdel-Bh group\BHGroup\BHGroupBAL\bin\Debug\EntityFramework.xml
+E:\Payment-Mdel-Bh group\BHGroup\BHGroupBAL\bin\Debug\Newtonsoft.Json.xml
+E:\Payment-Mdel-Bh group\BHGroup\BHGroupBAL\bin\Debug\Utilities.pdb

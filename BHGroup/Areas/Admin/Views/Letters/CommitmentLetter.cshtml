@@ -1,0 +1,89 @@
+﻿@model BHGroup.Areas.Admin.ViewModels.LetterModel
+@{
+    ViewBag.Title = "";
+}
+<section class="content-header">
+    <h1>
+        Commitment Letter
+                <br />
+        <br />
+        <a id="btnPrint" href="#" class="btn btn-primary btn-left pull-left" onclick="Print(event, 'btn1');"><i class=" glyphicon glyphicon-print"></i>Print</a>
+        <br />
+        <br />
+    </h1>
+
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Letter</a></li>
+        <li class="active">Commitment Letter</li>
+    </ol>
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="clearfix"></div>
+
+            <div id="letter" style="margin-left: 30px; margin-right: 30px; width: 595px; height: 842px; margin-top: 100px; white-space: normal; font-size: 16px;">
+                <p>
+                    <div style="float: left; width: 375px;">
+                        Token :@Model.DrowToken  </div>
+                    <div style="float: right; width: 103px;">
+                       Date :  @Convert.ToDateTime(Model.StartDate).ToString("d")</div>
+</p>
+
+
+                <h3 style="text-align:center">COMMITMENT LETTER</h3>
+
+                <p>
+                    Dear,<br /><label>@Model.Name</label><br />
+                    <label style=" white-space: normal; width: 295px;">@Model.Address</label>
+                </p>
+                <p> Dear Sir/Madam</p>
+                <p >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We the<b> M/S. B.H. Group. </b> Here by commit for the allotment and possession of plot at our residential plot scheme <b>“Saumya Greenz”</b> Vataman Dholera Highway, Ahmedabad, on receipt of the full and final installments as per the terms and conditions of joining as a member with as against your Registration ID.</p>
+
+                <p>
+                    The plot Number/Location will be allotted as per the terms by draw system giving priority to group booking at the time of allotment.
+                </p>
+                <p >
+                    The Commitment Letter is issued and binding on us against your payments for allotment of plot.
+                </p>
+                Date    : @Convert.ToDateTime(Model.StartDate).ToString("d")<br /><br />
+                <div>
+                    <div style="float: left; width: 375px;">
+
+                        Area    : @Model.PlotDesc<br />
+                        Date    :@Convert.ToDateTime(Model.StartDate).ToString("d")  <br />
+                        Token : @Model.DrowToken<br />
+                        EMI    : 75 * 12000/-	<br />
+                        Expected Last Date of EMI in   @Convert.ToDateTime(Model.EndDate).ToString("d")
+
+                    </div>
+                    <div style="float: right; width: 185px;">
+                        Place : Dholera <br />
+                        Mode of Payment  : Monthly<br />
+                        Total Amount : @Model.TotalAmt/-
+                    </div><p></p>
+                </div>
+                <div class="clearfix"><br /><br /></div>
+                <div style="float: right; width: 143px;">
+                    Your’s faithfully,<br />
+                    For, Saumya Greenz<br /><br />
+                    Authorised Signatory
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<script type="text/javascript">
+    @*$("#Members").on('change', function (evt, params) {
+        var path = '@Url.Action("CommitmentLetter", "Letters", new { id = "" })' + '?id=' + $(this).val();
+        window.location = path;
+    });*@
+
+    function Print(event) {
+        event.preventDefault(); window.print();
+    }
+</script>

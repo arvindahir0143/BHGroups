@@ -1,0 +1,148 @@
+﻿@model BHGroupEntity.MemberPayroll
+@{
+    ViewBag.Title = "Create";
+
+}
+
+@Html.Partial("_ResultMessage")
+
+<section class="content-header">
+    <h1>
+        Manage Members Payroll
+        @*<small>Control panel</small>*@
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Members</a></li>
+        <li class="active">Manage Members</li>
+    </ol>
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+
+                @using (Html.BeginForm("Save", "Payroll", FormMethod.Post, new { id = "Save-Member-Form" }))
+                {
+                @Html.ValidationSummary()
+                @Html.HiddenFor(p => p.PaymentId)
+                @Html.HiddenFor(p => p.CreatOn)
+
+                <div class="clearfix"></div>
+                <div class="box-body col-md-6">
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1"> Members</label>
+                        @Html.DropDownListFor(model => model.MemberId, (IEnumerable<SelectListItem>)ViewBag.MemberLookUp, "",
+                                new { @class = "form-control chosen col-md-6" })
+                        @Html.ValidationMessageFor(model => model.MemberId)
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1"> Installment</label>
+                        @Html.TextBoxFor(Model => Model.Installment, new { @class = "form-control", placeholder = "Enter Name" })
+                        @Html.ValidationMessageFor(m => m.Installment)
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputFile">Recieve Amount</label>
+                        @Html.TextBoxFor(Model => Model.ReceiveAmt, new { @class = "form-control", placeholder = "Enter Age" })
+                        @Html.ValidationMessageFor(m => m.ReceiveAmt)
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputFile">Due Amount</label>
+                        @Html.TextBoxFor(Model => Model.DueAmt, new { @class = "form-control ", @readonly = "readonly" })
+
+                    </div>
+
+                </div>
+
+                <div class="box-body col-md-6">
+
+                    <div class="form-group">
+                        <label for="exampleInputFile">Payment Type</label>
+                        @Html.DropDownListFor(model => model.PaymentType, Enum.GetNames(typeof(BHGroupEntity.Classes.En_PaymentType)).Select(e => new SelectListItem { Text = e }), new { @class = "form-control" })
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1"> Bank Name</label>
+                        @Html.TextBoxFor(Model => Model.BankName, new { @class = "form-control", placeholder = "Enter Bank Name" })
+                        @Html.ValidationMessageFor(m => m.BankName)
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputFile">Account No</label>
+                        @Html.TextBoxFor(Model => Model.AccountNo, new { @class = "form-control", placeholder = "Enter Account No" })
+                        @Html.ValidationMessageFor(m => m.AccountNo)
+                    </div>
+
+
+                </div>
+                <div class="clearfix"></div>
+                <div class="box-footer">
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                    <button class="btn btn-success" type="submit" onclick="Cancel()">Cancel</button>
+                </div>
+                }
+            </div>
+
+        </div>
+    </div>
+</section>
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+        $(document).ready(function ()
+        {
+           
+            if ($("#PaymentType").val() == "Cash")
+            {
+                document.getElementById("BankName").readOnly = true;
+                document.getElementById("AccountNo").readOnly = true;
+            }
+            else
+            {
+                alert("hiii");
+                document.getElementById("BankName").readOnly = false;
+                document.getElementById("AccountNo").readOnly = false;
+            }
+       
+            $("#ReceiveAmt").keyup(function () {
+
+                DueAmount();
+            });
+            $("#Installment").keyup(function () {
+                DueAmount();
+
+            });
+            
+            $("#PaymentType").change(function ()
+            {
+                Paymenttype();
+            });
+
+        });
+        function Paymenttype() {
+            if ($("#PaymentType").val() == "Cash") {
+                document.getElementById("BankName").readOnly = true;
+                document.getElementById("AccountNo").readOnly = true;
+            }
+            else {
+
+                document.getElementById("BankName").readOnly = false;
+                document.getElementById("AccountNo").readOnly = false;
+            }
+        }
+        function DueAmount() {
+            var Installment = parseInt($("#Installment").val());
+            var RecievedAmt = parseInt($("#ReceiveAmt").val());
+            var DueAmt = Installment - RecievedAmt;
+            parseInt($("#DueAmt").val(DueAmt));
+
+        }
+
+        function Cancel() {
+            window.location = '@Url.Content("~/Admin//Members/Index")';
+        }
+
+    </script>
+}

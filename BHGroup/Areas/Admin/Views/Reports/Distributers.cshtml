@@ -1,0 +1,112 @@
+﻿@model BHGroupEntity.Member
+@{
+    ViewBag.Title = "Member";
+}
+
+
+@Html.Partial("_ResultMessage")
+
+
+<script type="text/javascript">
+
+    function showGrid(MemberId, MemberType) {
+        $('#MemberDataGrid').jqGrid({
+            colNames: ['', 'Name', 'MemberShipNo', 'MemberType', 'PloatType', 'Qty', 'Total Commision'],
+            colModel: [
+                        { name: 'MemberId', key: true, search: false, hidden: true },
+                        { name: 'Name', index: 'Name', width: 20, search: true, searchoptions: JQ_sopt_string },
+
+                        { name: 'MemberShipNo', index: 'MemberShipNo', width: 15, align: "center", search: true, searchoptions: JQ_sopt_string },
+                        { name: 'MemberType', index: 'MemberType', width: 15, align: "center", search: true, searchoptions: JQ_sopt_string },
+                        { name: 'PloatType', index: 'PloatType', width: 15, search: true, searchoptions: JQ_sopt_string },
+                        { name: 'Qty', index: 'Qty', width: 20, search: true, searchoptions: JQ_sopt_string },
+                        { name: 'Total_Commision', index: 'Total_Commision', width: 20, search: true, searchoptions: JQ_sopt_string },
+
+            ],
+            pager: jQuery('#MemberDataPager'),
+            sortname: 'MemberId',
+            sortorder: "desc",
+            rowNum: 10,
+            rowList: [5, 10, 20, 50, 100],
+            autowidth: true,
+            height: '100%',
+            datatype: 'json',
+            cmTemplate: { title: false },
+            viewrecords: true,
+            mtype: 'GET',
+            jsonReader: {
+                root: "rows",
+                page: "page",
+                total: "total",
+                records: "records",
+                repeatitems: false,
+                userdata: "userdata"
+            },
+
+            url: '/Reports/GetGridDataReports?MemberId=' + MemberId + '&MemberType=' + MemberType
+        }).navGrid('#MemberDataPager', { view: false, del: false, add: false, edit: false, search: false, referesh: true },
+           {}, // default settings for edit
+           {}, // default settings for add
+           {}, // delete instead that del:false we need this
+           { closeOnEscape: true, multipleSearch: true, closeAfterSearch: true }, // search options
+           {} /* view parameters*/
+         ).jqGrid('filterToolbar', { stringResult: true, searchOnEnter: false, defaultSearch: 'cn' });
+    };
+
+
+
+    $(document).ready(function () {
+
+        $("#ParentId").change(function () {
+
+            showGrid($("#ParentId").val(), "Distributers");
+        });
+
+    });
+
+
+
+</script>
+<section class="content-header">
+    <h1>
+        Distributers Reports
+        @*<small>Control panel</small>*@
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Distributers</a></li>
+        <li class="active"> Distributers Reports</li>
+    </ol>
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <div class="clearfix"></div>
+                <div class="box-body col-md-6">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1"> Member</label>
+
+                        @Html.DropDownListFor(model => model.MemberId, (IEnumerable<SelectListItem>)ViewBag.DistributerstypeLookUp, "",
+                                                      new { @class = "form-control  chosen col-md-6", @id = "ParentId" })
+
+                    </div>
+                </div>
+                <div class="box-body col-md-12">
+                    <div class="jqgrid">
+                        <table id="MemberDataGrid"></table>
+                        <div id="MemberDataPager"></div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+
+}

@@ -1,0 +1,132 @@
+﻿@{
+    ViewBag.Title = "Members";
+    Layout = "~/Views/Shared/_MemberDashboard.cshtml";
+
+}
+<script src="~/Scripts/jquery.showMessage.min.js"></script>
+
+@Html.Partial("_ResultMessage")
+
+<script type="text/javascript">
+
+    function showGrid() {
+        $('#MemberDataGrid').jqGrid({
+            colNames: ['', 'Name', 'Installment', 'Receive Amount', 'Due Amount', 'Bank Name', 'Account No', 'Payment Type', 'Status', 'Created Date'],
+            colModel: [
+                        { name: 'PaymentId', key: true, search: false, hidden: true },
+                        { name: 'Name', index: 'Name', width: 20, search: true, searchoptions: JQ_sopt_string },
+
+                        { name: 'Installment', index: 'Installment', width: 15, align: "center", search: true, searchoptions: JQ_sopt_string },
+                        { name: 'ReceiveAmt', index: 'ReceiveAmt', width: 15, align: "center", search: true, searchoptions: JQ_sopt_string },
+                        { name: 'DueAmt', index: 'DueAmt', width: 15, search: true, searchoptions: JQ_sopt_string },
+                        { name: 'BankName', index: 'BankName', width: 20, search: true, searchoptions: JQ_sopt_string },
+                        { name: 'AccountNo', index: 'AccountNo', width: 20, search: true, searchoptions: JQ_sopt_string },
+                        { name: 'PaymentType', index: 'PaymentType', width: 20, search: true, searchoptions: JQ_sopt_string },
+                        { name: 'Status', index: 'Status', width: 20, search: true, searchoptions: JQ_sopt_string },
+                        {
+                            name: 'CreatOn', index: 'CreatOn', width: 20, align: "center", formatter: "date", search: true, searchoptions: {
+                                sopt: ['eq'], dataInit: function (el) {
+                                    $(el).datepicker({ autoclose: true })
+                                    .on('changeDate', function (ev) {
+                                        $(this).datepicker('hide');
+                                        $("#MemberDataGrid")[0].triggerToolbar();
+                                    });
+                                }
+                            }
+                        },
+                       
+            ],
+            pager: jQuery('#MemberDataPager'),
+            sortname: 'PaymentId',
+            sortorder: "desc",
+            rowNum: 10,
+            rowList: [5, 10, 20, 50, 100],
+            autowidth: true,
+            height: '100%',
+            datatype: 'json',
+            cmTemplate: { title: false },
+            viewrecords: true,
+            mtype: 'GET',
+            jsonReader: {
+                root: "rows",
+                page: "page",
+                total: "total",
+                records: "records",
+                repeatitems: false,
+                userdata: "userdata"
+            },
+            url: '/Member/GetGridData'
+        }).navGrid('#MemberDataPager', { view: false, del: false, add: false, edit: false, search: false, referesh: true },
+           {}, // default settings for edit
+           {}, // default settings for add
+           {}, // delete instead that del:false we need this
+           { closeOnEscape: true, multipleSearch: true, closeAfterSearch: true }, // search options
+           {} /* view parameters*/
+         ).jqGrid('filterToolbar', { stringResult: true, searchOnEnter: false, defaultSearch: 'cn' });
+    };
+
+    function ActionFormatter(cellvalue, options, rowObject) {
+
+        return "<a href='/Admin/Payroll/manage?id=" + cellvalue + " ' title='Edit' ><i class='fa fa-fw fa-pencil'></i></a> | <a href='javascript:void(0);' onclick='Delete(" + cellvalue + "); ' title='Delete'><i class='fa fa-fw fa-trash-o'></i></a> | <a href='javascript:void(0);' onclick='UpdateStatus(" + cellvalue + ");' title='Change Status'><i class='fa fa-fw fa-edit'></i></a> ";
+    }
+
+    $(document).ready(function () {
+        showGrid();
+    });
+
+    function Delete(entityId) {
+        if (confirm("Are you sure you want completely delete this Member ?")) {
+            $.post("/Payroll/Delete?id=" + entityId, function (data, status) {
+                if (data.success) {
+                    SuccessMessage(data.message);
+                    $('#MemberDataGrid').trigger('reloadGrid');
+                }
+                else {
+                    ErrorMessage(data.message);
+                }
+            });
+        }
+    }
+    function UpdateStatus(entityId) {
+        if (confirm("Are you sure you want change Status ?"))
+            $.post("/Payroll/ChangeStatus?id=" + entityId, function (data, status) {
+                if (data.success) {
+                    SuccessMessage(data.message);
+                    $('#MemberDataGrid').trigger('reloadGrid');
+                }
+                else {
+                    ErrorMessage(data.message);
+                }
+            });
+    }
+
+    function Add() {
+        window.location = '@Url.Content("~/Admin/Payroll/manage")';
+    }
+
+</script>
+<section class="content-header">
+    <h1>
+        Members
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Dashboard</li>
+    </ol>
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            
+            <div class="clearfix"><br /></div>
+            <div class="box-body col-md-12">
+                <div class="jqgrid">
+                    <table id="MemberDataGrid"></table>
+                    <div id="MemberDataPager"></div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+</section>
